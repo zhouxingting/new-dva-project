@@ -11,9 +11,9 @@ dayjs.extend(relativeTime);
 
 let app, store, dispatch, registered;
 
-const history = createBrowserHistory({
+export const history = createBrowserHistory({
   // basename
-  basename: process.env.NODE_ENV === 'production' ? '/data' : undefined,
+  // basename: process.env.NODE_ENV === 'production' ? '/data' : undefined,
 });
 
 function createApp(options) {
@@ -21,7 +21,7 @@ function createApp(options) {
   app = create({
     ...options,
     initialReducer: {
-      router: connectRouter(history),
+      routerReducer: connectRouter(history),
     },
     setupMiddlewares(middlewares) {
       return [routerMiddleware(history), ...middlewares];
@@ -38,7 +38,6 @@ function createApp(options) {
 
   store = app._store;
   app.getStore = () => store;
-  app.getHistory = () => app._history;
 
   dispatch = store.dispatch;
   app.dispatch = dispatch;
@@ -49,8 +48,5 @@ export default {
   createApp,
   getDispatch() {
     return app.dispatch;
-  },
-  getHistory() {
-    return app._history;
   },
 };
