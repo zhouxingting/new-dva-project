@@ -1,0 +1,38 @@
+@fade: #c7cad1;
+
+html,
+body,
+#root {
+  height: 100%;
+  line-height: 1.33333;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: @bg;
+  height: 100%;
+  font-family: PingFang SC;
+}
+p {
+  margin: 0;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+input::-webkit-input-placeholder {
+  /* placeholder颜色  */
+  color: @fade;
+  /* placeholder字体大小  */
+  font-size: 14px;
+}
+::-webkit-input-placeholder {
+  color: @fade;
+  font-size: 14px;
+}
