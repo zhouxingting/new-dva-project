@@ -1,9 +1,10 @@
 import React from 'react';
 import { ConfigProvider } from 'antd';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 import zh_CN from 'antd/lib/locale-provider/zh_CN';
-import dva, { history } from './dva';
+import dva from './dva';
 import models from './models/index';
 
 const dvaApp = dva.createApp({
@@ -12,12 +13,17 @@ const dvaApp = dva.createApp({
 });
 const store = dvaApp.getStore();
 
+export const history = createBrowserHistory({
+  // basename
+  basename: process.env.NODE_ENV === 'production' ? '/data' : undefined,
+});
+
 function AppWrapper({ children }) {
   return (
     <Provider store={store}>
-      <ConnectedRouter history={dvaApp.history}>
+      <Router history={history}>
         <ConfigProvider locale={zh_CN}>{children}</ConfigProvider>
-      </ConnectedRouter>
+      </Router>
     </Provider>
   );
 }
