@@ -1,7 +1,7 @@
 export default {
   namespace: 'test',
   state: {
-    test: 'test',
+    test: 'testssssssssss',
   },
   effects: {},
   reducers: {},
