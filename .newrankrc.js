@@ -17,5 +17,10 @@ module.exports = function (env) {
       ],
     ],
     svgCompress: true,
+    isThread: true,
+    terserPluginOptions: {
+      cache: true,
+      parallel: true,
+    },
   };
 };
