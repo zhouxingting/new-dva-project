@@ -1,5 +1,6 @@
 import { create } from 'dva-core';
 import createLoading from 'dva-loading';
+import createImmerPlugin from 'dva-immer';
 
 import * as dayjs from 'dayjs';
 import zhCn from 'dayjs/locale/zh-cn';
@@ -16,6 +17,7 @@ function createApp(options) {
     ...options,
   });
   app.use(createLoading({}));
+  app.use(createImmerPlugin({}));
 
   if (!registered) models.forEach((model) => app.model(model));
   registered = true;

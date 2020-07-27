@@ -4999,6 +4999,14 @@ dva-core@^2.0.2:
     redux-saga "^0.16.0"
     warning "^3.0.0"
 
+dva-immer@^0.4.19:
+  version "0.4.19"
+  resolved "https://registry.npm.taobao.org/dva-immer/download/dva-immer-0.4.19.tgz#aabb52bcf69cea26f1a08a9c5b0670486e063011"
+  integrity sha1-qrtSvPac6ibxoIqcWwZwSG4GMBE=
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    immer "^2.1.1"
+
 dva-loading@^3.0.20:
   version "3.0.20"
   resolved "https://registry.npm.taobao.org/dva-loading/download/dva-loading-3.0.20.tgz#348a0814e0091a80d6f608b51c3e3b92e3883c8d"
@@ -6551,6 +6559,11 @@ immer@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
   integrity sha512-O3sR1/opvCDGLEVcvrGTMtLac8GJ5IwZC4puPrLuRj3l7ICKvkmA0vGuU9OW8mV9WIBRnaxp5GJh9IEAaNOoYg==
+
+immer@^2.1.1:
+  version "2.1.5"
+  resolved "https://registry.npm.taobao.org/immer/download/immer-2.1.5.tgz?cache=0&sync_timestamp=1595826472575&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimmer%2Fdownload%2Fimmer-2.1.5.tgz#0389947455c5a2c7a47f1e6f415c9d1a62a1ebed"
+  integrity sha1-A4mUdFXFosekfx5vQVydGmKh6+0=
 
 import-cwd@^2.0.0:
   version "2.1.0"

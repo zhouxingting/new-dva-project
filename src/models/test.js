@@ -4,5 +4,9 @@ export default {
     test: 'testssssssssss',
   },
   effects: {},
-  reducers: {},
+  reducers: {
+    add(state) {
+      state.test = 'mmmmmmmm';
+    },
+  },
 };
